@@ -12,8 +12,11 @@
         { "_id": "789", "name": "Chess",       "developerId": "234" }
     ]
 
+
     function WebsiteService() {
         var api={
+            deleteWebsite:deleteWebsite,
+            createWebsite:createWebsite,
             findWebsitesForUserId:findWebsitesForUserId
         };
         return api;
@@ -25,6 +28,29 @@
                 }
             }
             return resultSet;
+
+
+        }
+
+        function createWebsite(developerId,name,description) {
+            var newWebsite={
+                _id: (new Date()).getTime()+"",
+                name: name,
+                description: description,
+                developerId: developerId
+            };
+            websites.push(newWebsite);
+            return newWebsite;
+
+        }
+        function deleteWebsite(websiteId) {
+            for(var i in websites){
+                if(websites[i]._id===websiteId){
+                    websites.splice(i,1);
+                    return true
+                }
+            }
+            return false;
 
 
         }
