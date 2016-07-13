@@ -39,7 +39,7 @@
             <input ng-model="model.user.lastName" type="text" class="form-control" id="last-name" placeholder="Annunziato">
         </div>
         </form>
-    <a class="btn btn-primary btn-block" href="#/website-list"  >Websites</a>
+    <a class="btn btn-primary btn-block" href="#/user/{{model.user._id}}/website"  >Websites</a>
     <a class="btn btn-danger btn-block" href="#/login"  >Logout</a>
 
 
@@ -57,7 +57,7 @@
 
             </div>
             <div class="col-xs-3 text-center">
-                <a href="/assignment/user/profile.html">
+                <a href="#/user">
                     <span class="glyphicon glyphicon-user"></span>
                 </a>
             </div>

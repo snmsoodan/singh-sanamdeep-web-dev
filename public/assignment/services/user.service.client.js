@@ -42,12 +42,9 @@
         function findUserByUsernameAndPassword(username,password){
             for(var i in users){
                 if(users[i].username===username&& users[i].password===password){
-                   // $location.url("/profile/"+users[i]._id);
                     return users[i];
 
                 }
-
-
             }
             return null;
         }

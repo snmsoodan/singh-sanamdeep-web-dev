@@ -17,7 +17,7 @@
             .when("/register",{
                 templateUrl:"views/user/register.view.client.html"
             })
-            .when("/profile/:id",{
+            .when("/user/:id",{
                 templateUrl:"views/user/profile.view.client.html",
                 controller: "ProfileController",
                 controllerAs:"model"
@@ -63,6 +63,14 @@
             })
             .when("/page-new",{
                 templateUrl:"views/page/page-new.view.client.html"
+            })
+
+
+
+            .when("/user/:userId/website",{
+                templateUrl:"views/website/website-list.view.client.html",
+                controller:"WebsiteListController",
+                controllerAs:"model"
             })
             .otherwise({
                 redirectTo:"/login"
