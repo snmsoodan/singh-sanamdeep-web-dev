@@ -15,7 +15,9 @@
                 controllerAs: "model"
             })
             .when("/register",{
-                templateUrl:"views/user/register.view.client.html"
+                templateUrl:"views/user/register.view.client.html",
+                controller:"RegisterController",
+                controllerAs:"model"
             })
             .when("/user/:id",{
                 templateUrl:"views/user/profile.view.client.html",
@@ -23,47 +25,54 @@
                 controllerAs:"model"
             })
 
+            .when("/user/:userId/website/:websiteId/page/:pageId/widget/new",{
+                templateUrl:"views/widget/widget-chooser.view.client.html",
+                controller:"WidgetChooserController",
+                controllerAs:"model"
 
-
-            .when("/website-edit",{
-                templateUrl:"views/website/website-edit.view.client.html"
-            })
-            .when("/website-list",{
-                templateUrl:"views/website/website-list.view.client.html"
-            })
-            .when("/website-new",{
-                templateUrl:"views/website/website-new.view.client.html"
             })
 
+            .when("/user/:userId/website/:websiteId/page/:pageId/widget-heading/:widgetId",{
+                templateUrl:"views/widget/widget-heading.view.client.html",
+                controller:"WidgetHeadingController",
+                controllerAs:"model"
+
+            })
+            .when("/user/:userId/website/:websiteId/page/:pageId/widget-image/:widgetId",{
+                templateUrl:"views/widget/widget-image.view.client.html",
+                controller:"WidgetImageController",
+                controllerAs:"model"
 
 
-            .when("/widget-chooser",{
-                templateUrl:"views/widget/widget-chooser.view.client.html"
             })
-            .when("/widget-heading",{
-                templateUrl:"views/widget/widget-heading.view.client.html"
-            })
-            .when("/widget-image",{
-                templateUrl:"views/widget/widget-image.view.client.html"
-            })
-            .when("/widget-list",{
-            templateUrl:"views/widget/widget-list.view.client.html"
-            })
-            .when("/widget-youtube",{
-                templateUrl:"views/widget/widget-youtube.view.client.html"
+            .when("/user/:userId/website/:websiteId/page/:pageId/widget-youtube/:widgetId",{
+                templateUrl:"views/widget/widget-youtube.view.client.html",
+                controller:"WidgetYoutubeController",
+                controllerAs:"model"
+
+
             })
 
 
 
-            .when("/page-edit",{
-                templateUrl:"views/page/page-edit.view.client.html"
+
+            .when("/user/:userId/website/:websiteId/page",{
+                templateUrl:"views/page/page-list.view.client.html",
+                controller:"PageListController",
+                controllerAs:"model"
             })
-            .when("/page-list",{
-                templateUrl:"views/page/page-list.view.client.html"
+            .when("/user/:userId/website/:websiteId/page/new",{
+                templateUrl:"views/page/page-new.view.client.html",
+                controller:"PageNewController",
+                controllerAs:"model"
             })
-            .when("/page-new",{
-                templateUrl:"views/page/page-new.view.client.html"
+            .when("/user/:userId/website/:websiteId/page/:pageId",{
+                templateUrl:"views/page/page-edit.view.client.html",
+                controller:"PageEditController",
+                controllerAs:"model"
             })
+
+
 
 
 
@@ -82,6 +91,15 @@
                 controller:"EditWebsiteController",
                 controllerAs:"model"
             })
+            .when("/user/:userId/website/:websiteId/page/:pageId/widget",{
+                templateUrl:"views/widget/widget-list.view.client.html",
+                controller:"WidgetListController",
+                controllerAs:"model"
+
+            })
+
+
+
 
 
             .otherwise({

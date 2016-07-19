@@ -13,13 +13,17 @@
     ]
 
 
-    function WebsiteService() {
+    function WebsiteService($routeParams) {
         var api={
+            findWebsiteById:findWebsiteById,
             deleteWebsite:deleteWebsite,
             createWebsite:createWebsite,
-            findWebsitesForUserId:findWebsitesForUserId
+            findWebsitesForUserId:findWebsitesForUserId,
+            updateWebsite:updateWebsite
         };
         return api;
+        
+        
         function findWebsitesForUserId(userId) {
             var resultSet=[];
             for(var i in websites){
@@ -52,6 +56,26 @@
             }
             return false;
 
+
+        }
+
+        function findWebsiteById(websiteId) {
+            for(var i in websites){
+                if(websites[i]._id===websiteId){
+                    return websites[i];
+                }
+            }
+            
+        };
+
+        function updateWebsite(id,website) {
+            for(var i in websites){
+                if(websites[i]._id===id){
+                    websites[i].name=website.name;
+                    return true;
+                }
+            }
+            return false;
 
         }
     }

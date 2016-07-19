@@ -13,11 +13,11 @@
         </div>
     </div>
 </nav>
-{{model.websites}}
+<!--{{model.websites}}-->
 <div class="container">
     <ul class="list-group">
         <li ng-repeat="website in model.websites" class="list-group-item">
-            <a href="#/page-list">
+            <a href="#/user/{{website.developerId}}/website/{{website._id}}/page">
                 {{website.name}}
             </a>
             <a href="#/user/{{website.developerId}}/website/{{website._id}}" class="pull-right">
@@ -41,7 +41,7 @@
 
             </div>
             <div class="col-xs-3 text-center">
-                <a href="#/user">
+                <a href="#/user/{{model.userId}}">
                     <span class="glyphicon glyphicon-user"></span>
                 </a>
             </div>

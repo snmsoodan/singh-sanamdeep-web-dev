@@ -2,7 +2,7 @@
     <div class="container-fluid">
         <div class="navbar-header">
             <p class="navbar-text pull-left">
-                <a href="#/website-list" class="navbar-link">
+                <a href="#/user/{{model.userId}}/website/" class="navbar-link">
           <span class="glyphicon glyphicon-chevron-left">
           </span>
                 </a>
@@ -11,7 +11,7 @@
                 Pages
             </a>
             <p class="navbar-text pull-right">
-                <a href="#/page-new" class="navbar-link">
+                <a href="#/user/{{model.userId}}/website/{{model.websiteId}}/page/new" class="navbar-link">
           <span class="glyphicon glyphicon-plus">
           </span>
                 </a>
@@ -22,38 +22,14 @@
 
 <div class="container">
     <ul class="list-group">
-        <li class="list-group-item">
-            <a href="#/widget-list">
-                Some blog post
+        <li ng-repeat="page in model.pages" class="list-group-item">
+            <a href="#/user/{{model.userId}}/website/{{page.websiteId}}/page/{{page._id}}/widget">
+                {{page.name}}
             </a>
-            <a href="#/page-edit" class="pull-right">
+            <a href="#/user/{{model.userId}}/website/{{page.websiteId}}/page/{{page._id}}" class="pull-right">
                 <span class="glyphicon glyphicon-cog"></span>
             </a>
             </li>
-        <li class="list-group-item">
-            <a href="#">
-                Home page
-            </a>
-            <a href="#" class="pull-right">
-                <span class="glyphicon glyphicon-cog"></span>
-            </a>
-        </li>
-        <li class="list-group-item">
-            <a href="#">
-                About Page
-            </a>
-            <a href="#" class="pull-right">
-                <span class="glyphicon glyphicon-cog"></span>
-            </a>
-        </li>
-        <li class="list-group-item">
-            <a href="#">
-                product list
-            </a>
-            <a href="#" class="pull-right">
-                <span class="glyphicon glyphicon-cog"></span>
-            </a>
-        </li>
     </ul>
 </div>
 
@@ -70,7 +46,7 @@
 
             </div>
             <div class="col-xs-3 text-center">
-                <a href="#/profile">
+                <a href="#/user/{{model.userId}}">
                     <span class="glyphicon glyphicon-user"></span>
                 </a>
             </div>
