@@ -31,10 +31,6 @@ module.exports=function (app) {
         }else{
             res.send(users);
         }
-
-        console.log(username)
-        console.log(password)
-        res.send(users);
     }
 
     function findUserByCredentials(username,password,res) {
