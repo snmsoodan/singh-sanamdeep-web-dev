@@ -11,14 +11,18 @@
 
 
         function createUser(username,password,verifyPassword) {
-            var id=(new Date()).getTime()+"";
-            var success=UserService.createUser(id,username,password,verifyPassword);
-            if(success){
-                $location.url("/user/"+id);
-            }
-            else{
-                $location.url("/register");
-            }
+            UserService
+                .createUser(username,password,verifyPassword)
+                .then(function (response) {
+                    var user=response.data;
+                    if(user){
+                        $location.url("/user/"+user._id);
+                    }
+                    else{
+                        $location.url("/register");
+                    }
+                })
+
         };
 
 

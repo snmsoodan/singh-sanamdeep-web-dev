@@ -29,12 +29,8 @@
         }
 
         function findUserById(id) {
-            for(var i in users){
-                if(users[i]._id===id){
-                    return users[i];
-                }
-            }
-            return null;
+           var url="/api/user/"+id;
+            return $http.get(url);
         }
 
         function findUserByCredentials(username,password){
@@ -43,17 +39,16 @@
 
         }
 
-        function createUser(id,username,password,verifyPassword) {
+        function createUser(username,password,verifyPassword) {
             if(password===verifyPassword){
                 var newUser= {
-                    _id:id,
                     username:username,
                     password:password,
                     firstName:username,
                     lastName:username
                 };
-                users.push(newUser);
-                return newUser;
+
+                return $http.post("/api/user/",newUser);
             }
             else{
                 return null;
