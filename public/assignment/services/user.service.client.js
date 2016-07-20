@@ -21,7 +21,7 @@
 
             var url="/api/user/"+id;
             return $http.put(url,newUser)
-            
+
         }
 
         function findUserById(id) {
@@ -53,14 +53,10 @@
         }
 
         function deleteUser(id) {
-            console.log(id);
-            for(var i in users){
-                if(users[i]._id===id){
-                    users.splice(i,1);
-                    return true;
-                }
-            }
-            return null;
+
+            var url="/api/user/"+id;
+            return $http.delete(url);
+            
         }
 
     }

@@ -31,18 +31,16 @@
         }
         
         function deleteUser() {
-            console.log("controller function");
             var id=$routeParams.id;
-            var result=UserService.deleteUser(id);
-            if(result){
-                console.log("controller function end");
-                $location.url("/login");
-            }
-            else{
-                console.log("controller failure");
-                vm.error("Some error");                
-            }
-            
+            UserService
+                .deleteUser(id)
+                .then(
+                function () {
+                    $location.url("/login");
+            },
+            function (error) {
+                vm.error="unable to update user";
+            })
         };
 
     }
