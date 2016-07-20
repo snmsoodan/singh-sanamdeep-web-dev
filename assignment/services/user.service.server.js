@@ -7,9 +7,11 @@ module.exports=function (app) {
         {_id: "456", username: "jannunzi", password: "jannunzi", firstName: "Jose",   lastName: "Annunzi" }
     ];
 
+
     app.post("/api/user",createUser);
     app.get("/api/user",getUsers);
     app.get("/api/user/:userId",findUserById);
+    app.put("/api/user/:userId",updateUser);
 
     function createUser(req,res) {
         var user=req.body;
@@ -17,6 +19,20 @@ module.exports=function (app) {
         user._id=(new Date()).getTime()+"";
         users.push(user);
         res.send(user);
+    }
+
+    function updateUser(req,res) {
+        var id=req.params.userId;
+        var newUser=req.body;
+        for(var i in users){
+            if(users[i]._id===id){
+                users[i].firstName=newUser.firstName;
+                users[i].lastName=newUser.lastName;
+                res.send(200);
+                return;
+            }
+        }
+        res.send(400);
     }
 
     function findUserById(req,res) {

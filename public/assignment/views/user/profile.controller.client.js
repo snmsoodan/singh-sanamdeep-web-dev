@@ -19,9 +19,15 @@
         init();
 
         function updateUser(newUser) {
-            UserService.updateUser(id,newUser);
-
-
+            UserService
+                .updateUser(id,newUser)
+                .then(
+                    function (response) {
+                        vm.success="updated successfully";
+                    },
+                    function (error) {
+                        vm.error="unable to update user";
+                    });
         }
         
         function deleteUser() {
