@@ -13,13 +13,10 @@
                  .then(function(response) {
                     console.log(response)
                     var user=response.data;
-                    if(user._id){
                      $location.url("/user/"+user._id);
-                    }
-                    else{
+                 },function (error) {
                      vm.error="User not found";
-                    }
-             });
+                 });
 
 
 

@@ -10,14 +10,23 @@
         vm.createPage=createPage;
 
         function createPage(websiteId,name) {
-            console.log("1")
-            var result=PageService.createPage(websiteId,name,vm.userId);
-            if(result){
-                $location.url("/user/"+vm.userId+"/website/"+websiteId+"/page");
-            }
-            else{
-                vm.error="failed to create new page";
-            }
+            console.log("controller");
+            // var result=PageService.createPage(websiteId,name,vm.userId);
+            // if(result){
+            //     $location.url("/user/"+vm.userId+"/website/"+websiteId+"/page");
+            // }
+            // else{
+            //     vm.error="failed to create new page";
+            // }
+
+            PageService
+                .createPage(websiteId,name,vm.userId)
+                .then(function (response) {
+                        $location.url("/user/"+vm.userId+"/website/"+websiteId+"/page");
+                },
+                function (error) {
+                    vm.error="failed to create new page";
+                })
 
         }
 

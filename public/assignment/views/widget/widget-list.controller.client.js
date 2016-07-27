@@ -24,8 +24,14 @@
 
         function init(){
 
-            vm.widgets=WidgetService.findWidgetsForPageId(vm.pageId);
-
+           // vm.widgets=WidgetService.findWidgetsForPageId(vm.pageId);
+            WidgetService
+                .findWidgetsForPageId(vm.pageId)
+                .then(function (response) {
+                    vm.widgets=response.data;
+                    $(".container")
+                        .sortable({axis:"y"});
+                })
 
         }
         init();
