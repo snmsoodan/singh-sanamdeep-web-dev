@@ -14,6 +14,7 @@
             console.log("TodosController");
             console.log(start);
             console.log(end);
+            $http.put("/api/todo");
         }
     }
 })();

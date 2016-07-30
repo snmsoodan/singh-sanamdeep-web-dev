@@ -105,6 +105,9 @@
                 controllerAs:"model"
 
             })
+            .when("/html",{
+                templateUrl:"views/widget/widget-html.view.client.html"
+            })
 
 
 
