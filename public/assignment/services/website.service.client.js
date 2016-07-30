@@ -25,10 +25,11 @@
 
         function createWebsite(developerId,name,description) {
             var newWebsite={
-                _id: (new Date()).getTime()+"",
+                //_id: (new Date()).getTime()+"",
                 name: name,
                 description: description,
-                developerId: developerId
+                //developerId: developerId
+                _user: developerId
             };
             // websites.push(newWebsite);
             // return newWebsite;

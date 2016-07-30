@@ -1,6 +1,7 @@
-module.exports=function (app) {
+module.exports=function (app,models) {
 
 
+    var widgetModel=models.widgetModel
     var multer = require('multer'); // npm install multer --save
     var upload = multer({ dest: __dirname+'/../../public/uploads' });
 
@@ -48,75 +49,113 @@ module.exports=function (app) {
     function createWidget(req,res) {
         var pageId=req.params.pageId;
         var newWidget=req.body;
-        widgets.push(newWidget);
-        res.send(200);
+        // widgets.push(newWidget);
+        // res.send(200);
+        widgetModel
+            .createWidget(newWidget)
+            .then(function (widget) {
+                res.json(widget);
+            },function (error) {
+                res.statusCode(404).send(error);
+            })
     }
 
     function findAllWidgetsForPage(req,res) {
-        console.log("a")
-        res.send(widgets);
+        //res.send(widgets);
+        var pageId=req.params.pageId;
+        widgetModel
+            .findAllWidgetsForPage(pageId)
+            .then(function (widgets) {
+                res.json(widgets);
+            },function (error) {
+                res.statusCode(404).send(error);
+            })
     }
 
     function findWidgetById(req,res) {
         var widgetId=req.params.widgetId;
-        for(var i in widgets){
-            if(widgets[i]._id===widgetId){
-                res.send(widgets[i]);
-                return;
-            }
-        }
-        res.send(400);
+        // for(var i in widgets){
+        //     if(widgets[i]._id===widgetId){
+        //         res.send(widgets[i]);
+        //         return;
+        //     }
+        // }
+        // res.send(400);
+        widgetModel
+            .findWidgetById(widgetId)
+            .then(function (widget) {
+                res.send(widget);
+            },function (error) {
+                res.statusCode(404).send(error);
+            })
     }
 
     function deleteWidget(req,res) {
         var widgetId=req.params.widgetId;
-        for(var i in widgets){
-            if(widgets[i]._id===widgetId){
-                widgets.splice(i,1);
+        // for(var i in widgets){
+        //     if(widgets[i]._id===widgetId){
+        //         widgets.splice(i,1);
+        //         res.send(200);
+        //         return;
+        //     }
+        // }
+        // res.send(400);
+
+        widgetModel
+            .deleteWidget(widgetId)
+            .then(function (status) {
                 res.send(200);
-                return;
-            }
-        }
-        res.send(400);
+            },function (error) {
+                res.statusCode(404).send(error);
+            })
     }
 
     function updateWidget(req,res) {
          var widget=req.body;
         var widgetId=req.params.widgetId;
-        for(var i in widgets){
-            if(widgets[i]._id===widgetId){
-                if(widget.widgetType==="HEADER") {
-                    widgets[i].text = widget.text;
-                    widgets[i].size = widget.size;
-                    res.send(200);
-                    return;
-                }
-                else if(widget.widgetType==="IMAGE") {
-                    console.log("image")
-                    console.log(widget.url)
-                    console.log(widget.widgetType)
-                    widgets[i].text = widget.text;
-                    widgets[i].width = widget.width;
-                    widgets[i].url = widget.url;
-                    res.send(200);
-                    return;
-                }
-                else if(widget.widgetType==="YOUTUBE") {
-                    widgets[i].text = widget.text;
-                    widgets[i].width = widget.width;
-                    widgets[i].url = widget.url;
-                    res.send(200);
-                    return;
-                }
-                else if(widget.widgetType==="HTML") {
-                    widgets[i].text = widget.text;
-                    widgets[i].width = widget.width;
-                    res.send(200);
-                    return;
-                }
-            }
-        }
-        res.send(400);
+        var widgetType=widget.type;
+        // for(var i in widgets){
+        //     if(widgets[i]._id===widgetId){
+        //         if(widget.type==="HEADER") {
+        //             widgets[i].text = widget.text;
+        //             widgets[i].size = widget.size;
+        //             res.send(200);
+        //             return;
+        //         }
+        //         else if(widget.type==="IMAGE") {
+        //             console.log("image")
+        //             console.log(widget.url)
+        //             console.log(widget.widgetType)
+        //             widgets[i].text = widget.text;
+        //             widgets[i].width = widget.width;
+        //             widgets[i].url = widget.url;
+        //             res.send(200);
+        //             return;
+        //         }
+        //         else if(widget.type==="YOUTUBE") {
+        //             widgets[i].text = widget.text;
+        //             widgets[i].width = widget.width;
+        //             widgets[i].url = widget.url;
+        //             res.send(200);
+        //             return;
+        //         }
+        //         else if(widget.type==="HTML") {
+        //             widgets[i].text = widget.text;
+        //             widgets[i].width = widget.width;
+        //             res.send(200);
+        //             return;
+        //         }
+        //     }
+        // }
+        // res.send(400);
+        
+        widgetModel
+            .updateWidget(widgetType,widget)
+            .then(function (status) {
+                res.send(200);
+            },function (error) {
+                res.statusCode(404).send(error);
+            })
         
     }
 

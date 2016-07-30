@@ -1,6 +1,6 @@
-module.exports=function (app) {
+module.exports=function (app,models) {
 
-
+    var websiteModel=models.websiteModel;
     var websites=[
         { "_id": "123", "name": "Facebook",    "developerId": "456" },
         { "_id": "234", "name": "Tweeter",     "developerId": "456" },
@@ -18,60 +18,101 @@ module.exports=function (app) {
 
     function createWebsite(req,res) {
         var userId=req.params.userId;
-        var newWebsite=req.body;
-        websites.push(newWebsite);
-        res.send(200);
+        var website=req.body;
+        websiteModel
+            .createWebsite(userId,website)
+            .then(function(website) {
+                console.log("success")
+                res.json(website);
+            },function(error) {
+                console.log("failure");
+                res.statusCode(404).send(error);
+            });
+
+        // websites.push(newWebsite);
+        // res.send(200);
 
     }
 
     function findAllWebsitesForUser(req,res) {
         var userId=req.params.userId;
-        var resultSet=[];
-        for(var i in websites){
-            if(websites[i].developerId===userId){
-                resultSet.push(websites[i]);
-            }
-        }
-        res.json(resultSet);
+
+        websiteModel
+            .findAllWebsitesForUser(userId)
+            .then(function (websites) {
+                res.json(websites);
+            },function (error) {
+                res.statusCode(404).send(error);
+            })
+
+        // var resultSet=[];
+        // for(var i in websites){
+        //     if(websites[i].developerId===userId){
+        //         resultSet.push(websites[i]);
+        //     }
+        // }
+        // res.json(resultSet);
     }
 
     function findWebsiteById(req,res) {
         var websiteId=req.params.websiteId;
-        for(var i in websites){
-            if(websites[i]._id===websiteId){
-                 res.send(websites[i]);
-            }
-        }
+        // for(var i in websites){
+        //     if(websites[i]._id===websiteId){
+        //          res.send(websites[i]);
+        //     }
+        // }
+        
+        websiteModel
+            .findWebsiteById(websiteId)
+            .then(function (website) {
+                res.json(website);
+            },function (error) {
+                res.statusCode(404).send(error);
+            })
+        
     }
 
     function deleteWebsite(req,res) {
         var websiteId=req.params.websiteId;
-        for(var i in websites){
-            if(websites[i]._id===websiteId){
-                websites.splice(i,1);
-                 res.send(200);
-                return;
-            }
-        }
-         res.send(400);
+        // for(var i in websites){
+        //     if(websites[i]._id===websiteId){
+        //         websites.splice(i,1);
+        //          res.send(200);
+        //         return;
+        //     }
+        // }
+        //  res.send(400);
+        websiteModel
+            .deleteWebsite(websiteId)
+            .then(function (status) {
+                res.send(200);
+            },function (error) {
+                res.statusCode(404).send(error);
+            })
     }
 
 
     function updateWebsite(req,res) {
-        console.log("update");
         var id=req.params.websiteId;
-        console.log(id);
-        console.log("server");
         var website=req.body;
-        for(var i in websites){
-            if(websites[i]._id===id){
-                websites[i].name=website.name;
-                console.log(website.name);
+        // for(var i in websites){
+        //     if(websites[i]._id===id){
+        //         websites[i].name=website.name;
+        //         console.log(website.name);
+        //         res.send(200);
+        //         return;
+        //     }
+        // }
+        // res.send(400);
+        
+        websiteModel
+            .updateWebsite(id,website)
+            .then(function (status) {
                 res.send(200);
-                return;
-            }
-        }
-        res.send(400);
+            },function (error) {
+                res.statusCode(404).send(error);
+            })
+        
     }
 
 

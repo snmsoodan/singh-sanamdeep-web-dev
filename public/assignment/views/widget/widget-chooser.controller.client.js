@@ -12,7 +12,7 @@
 
 
         function createWidget(type){
-            var widgetId=(new Date).getTime()+"";
+           // var widgetId=(new Date).getTime()+"";
             // var result=WidgetService.createWidget(widgetId,type,vm.pageId);
             // if(result){
             //    
@@ -24,9 +24,9 @@
             //     vm.error="failure";
             // }
             WidgetService
-                .createWidget(widgetId,type,vm.pageId)
+                .createWidget(type,vm.pageId)
                 .then(function (response) {
-                    $location.url("/user/"+vm.userId+"/website/"+vm.websiteId+"/page/"+vm.pageId+"/"+type+"/"+widgetId);
+                    $location.url("/user/"+vm.userId+"/website/"+vm.websiteId+"/page/"+vm.pageId+"/"+type+"/"+response.data._id);
                 },function (error) {
                     vm.error="failure";
                 })

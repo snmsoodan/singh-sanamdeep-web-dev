@@ -39,12 +39,12 @@
             return $http.get(url);
         }
         
-        function createWidget(widgetId,type,pageId) {
+        function createWidget(type,pageId) {
             if(type==="widget-heading"){
                 var newWidget={
-                    _id:widgetId,
-                    widgetType:"HEADER",
-                    pageId:pageId,
+                 //   _id:widgetId,
+                    type:"HEADER",
+                    _page:pageId,
                     size:2,
                     text:"Default Text"
                 };
@@ -54,11 +54,11 @@
                 return $http.post(url,newWidget);
             }
             else if(type==="widget-image"){
-                console.log(widgetId);
+               // console.log(widgetId);
                 var newWidget= {
-                    _id:widgetId,
-                    widgetType:"IMAGE",
-                    pageId:pageId,
+                //    _id:widgetId,
+                    type:"IMAGE",
+                    _page:pageId,
                     width:"100%",
                     url:"http://lorempixel.com/400/200/",
                     text:"Default Text"
@@ -71,9 +71,9 @@
             else if(type==="widget-youtube"){
 
                 var newWidget= {
-                    _id:widgetId,
-                    widgetType:"YOUTUBE",
-                    pageId:pageId,
+                  //  _id:widgetId,
+                    type:"YOUTUBE",
+                    _page:pageId,
                     width:"100%",
                     url:"https://youtu.be/AM2Ivdi9c4E"
                 };

@@ -26,21 +26,21 @@
 
 
     <div ng-repeat="widget in model.widgets" class="jga-widget">
-        <div ng-switch="widget.widgetType" class="jga-widget-tool">
+        <div ng-switch="widget.type" class="jga-widget-tool">
 
-            <a ng-switch-when="HTML" href="#/user/{{model.userId}}/website/{{model.websiteId}}/page/{{widget.pageId}}/widget-heading/{{widget._id}}">
+            <a ng-switch-when="HTML" href="#/user/{{model.userId}}/website/{{model.websiteId}}/page/{{widget._page}}/widget-heading/{{widget._id}}">
                 <span class="glyphicon glyphicon-cog"> </span>
             </a>
 
-            <a ng-switch-when="HEADER" href="#/user/{{model.userId}}/website/{{model.websiteId}}/page/{{widget.pageId}}/widget-heading/{{widget._id}}">
+            <a ng-switch-when="HEADER" href="#/user/{{model.userId}}/website/{{model.websiteId}}/page/{{widget._page}}/widget-heading/{{widget._id}}">
                 <span class="glyphicon glyphicon-cog"> </span>
             </a>
 
-            <a ng-switch-when="IMAGE" href="#/user/{{model.userId}}/website/{{model.websiteId}}/page/{{widget.pageId}}/widget-image/{{widget._id}}">
+            <a ng-switch-when="IMAGE" href="#/user/{{model.userId}}/website/{{model.websiteId}}/page/{{widget._page}}/widget-image/{{widget._id}}">
                 <span class="glyphicon glyphicon-cog"> </span>
             </a>
 
-            <a ng-switch-when="YOUTUBE" href="#/user/{{model.userId}}/website/{{model.websiteId}}/page/{{widget.pageId}}/widget-youtube/{{widget._id}}">
+            <a ng-switch-when="YOUTUBE" href="#/user/{{model.userId}}/website/{{model.websiteId}}/page/{{widget._page}}/widget-youtube/{{widget._id}}">
                 <span class="glyphicon glyphicon-cog"> </span>
             </a>
 
@@ -48,7 +48,7 @@
         </div>
 
 
-        <div ng-switch="widget.widgetType">
+        <div ng-switch="widget.type">
             <div ng-switch-when="HEADER" ng-switch="widget.size">
                 <h1 ng-switch-when="1">{{widget.text}}</h1>
                 <h2 ng-switch-when="2">{{widget.text}}</h2>

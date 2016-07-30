@@ -33,9 +33,9 @@
         
         function createPage(websiteId,name,userId) {
             var newPage={
-                _id:(new Date()).getTime()+"",
+               // _id:(new Date()).getTime()+"",
                 name:name,
-                websiteId:websiteId
+                _website:websiteId
             }
             // pages.push(newPage);
             // return true;
