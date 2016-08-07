@@ -552,7 +552,7 @@
       <workItem from="1470090829485" duration="2924000" />
       <workItem from="1470270448897" duration="1241000" />
       <workItem from="1470451968878" duration="14232000" />
-      <workItem from="1470602258990" duration="3780000" />
+      <workItem from="1470602258990" duration="4640000" />
     </task>
     <task id="LOCAL-00001" summary="Added login,register and profile pages">
       <created>1467790163583</created>
@@ -698,7 +698,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="283050000" />
+    <option name="totallyTimeSpent" value="283910000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
