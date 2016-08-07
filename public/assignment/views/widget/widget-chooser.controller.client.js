@@ -26,6 +26,7 @@
             WidgetService
                 .createWidget(type,vm.pageId)
                 .then(function (response) {
+                    console.log(type);
                     $location.url("/user/"+vm.userId+"/website/"+vm.websiteId+"/page/"+vm.pageId+"/"+type+"/"+response.data._id);
                 },function (error) {
                     vm.error="failure";

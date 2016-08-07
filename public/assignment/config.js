@@ -7,12 +7,11 @@
     function Config($routeProvider) {
         $routeProvider
 
-            .when("/flickr",{
-                templateUrl:"views/widget/widget-flickr-search.view.client.html",
-                controller:"FlickrImageSearchController",
-                controllerAs:"model"
-
-        })
+            .when("/user/:userId/website/:websiteId/page/:pageId/widget/:widgetId/flickr", {
+                templateUrl: "views/widget/widget-flickr-search.view.client.html",
+                controller: "FlickrImageSearchController",
+                controllerAs: "model"
+            })
 
             .when("/",{
                 templateUrl:"views/home.html"
@@ -30,7 +29,10 @@
             .when("/user/:id",{
                 templateUrl:"views/user/profile.view.client.html",
                 controller: "ProfileController",
-                controllerAs:"model"
+                controllerAs:"model",
+                resolve:{
+                    loggedIn:checkLoggedIn
+                }
             })
 
             .when("/user/:userId/website/:websiteId/page/:pageId/widget/new",{
@@ -116,6 +118,26 @@
             .otherwise({
                 redirectTo:"/login"
             })
+        
+        
+        function checkLoggedIn(UserService,$location,$q) {
+            var deferred=$q.defer();
+            UserService
+                .loggedIn()
+                .then(function (response) {
+                    var user=response.data;
+                    console.log(user);
+                    if(user === '0'){
+                        deferred.reject();
+                        $location.url("/login");
+                    }else{
+                        deferred.resolve();
+                    }
+                },function (err) {
+                    $location.url("/login");
+                });
+            return deferred.promise;
+        }
 
     }
 })();

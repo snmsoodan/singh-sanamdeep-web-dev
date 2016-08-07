@@ -7,6 +7,8 @@
          var vm=this;
         vm.updateUser=updateUser;
         vm.deleteUser=deleteUser;
+        vm.logout=logout;
+
 
         var id=$routeParams.id;
         function init() {
@@ -17,6 +19,18 @@
                 })
         }
         init();
+
+        function logout() {
+            UserService
+                .logout()
+                .then(
+                    function (response) {
+                        $location.url("/login")
+                    },function (error) {
+                        $location.url("/login")
+                    }
+                )
+        }
 
         function updateUser(newUser) {
             UserService

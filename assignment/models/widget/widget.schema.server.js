@@ -1,6 +1,7 @@
 module.exports=function () {
   var mongoose=require("mongoose")
     var WidgetSchema=mongoose.Schema({
+        order:Number,
         _page:{type:mongoose.Schema.ObjectId,ref:"Page"},
         type:String,
         name:String,

@@ -34,6 +34,7 @@
             //  
             //     vm.error="failure";
             // }
+            
             WidgetService
                 .updateWidget(vm.widgetId,widget)
                 .then(function (response) {

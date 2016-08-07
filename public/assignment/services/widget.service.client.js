@@ -12,11 +12,20 @@
             createWidget:createWidget,
             deleteWidget:deleteWidget,
             findWidgetById:findWidgetById,
-            updateWidget:updateWidget
+            updateWidget:updateWidget,
+            reorderWidget: reorderWidget
         };
         return api;
+
+        function reorderWidget(pageId, start, end) {
+            console.log(start + "the start position");
+            console.log(end + " the end position");
+            return $http.put("/page/"+pageId+"/widget?start="+start+"&end="+end);
+        }
         
         function updateWidget(widgetId, widget) {
+            console.log(widgetId)
+            console.log("2")
             var url="/api/widget/"+widgetId;
             return $http.put(url,widget);
         }

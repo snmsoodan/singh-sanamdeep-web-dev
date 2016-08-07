@@ -13,9 +13,45 @@
             createUser:createUser,
             findUserByCredentials: findUserByCredentials,
             findUserById:findUserById,
-            updateUser:updateUser
+            updateUser:updateUser,
+            login:login,
+            logout:logout,
+            loggedIn:loggedIn,
+            register:register
+
         };
         return api;
+
+        function loggedIn() {
+            return $http.get("/api/loggedIn");
+        }
+
+        function register(username,password,verifyPassword) {
+            if (password === verifyPassword) {
+                var newUser = {
+                    username: username,
+                    password: password,
+                    firstName: username,
+                    lastName: username
+                }
+                return $http.post("/api/register/", newUser);
+            }
+            else {
+                return null;
+            }
+        }
+
+        function login(username,password) {
+            var user ={
+                username:username,
+                password:password
+            };
+            return $http.post("/api/login",user);
+        }
+        
+        function logout() {
+            return $http.post("/api/logout");
+        }
 
         function updateUser(id, newUser) {
 

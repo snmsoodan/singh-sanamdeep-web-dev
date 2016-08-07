@@ -8,7 +8,10 @@
         vm.websiteId=$routeParams.websiteId;
         vm.pageId=$routeParams.pageId;
         vm.getSafeHtml=getSafeHtml;
-        vm.getSafeUrl=getSafeUrl
+        vm.getSafeUrl=getSafeUrl;
+        vm.reorderWidget=reorderWidget;
+
+        
 
         function getSafeHtml(widget) {
             return $sce.trustAsHtml(widget.text);
@@ -29,12 +32,30 @@
                 .findWidgetsForPageId(vm.pageId)
                 .then(function (response) {
                     vm.widgets=response.data;
-                    $(".container")
-                        .sortable({axis:"y"});
+                    // $(".container")
+                    //     .sortable({axis:"y"});
                 })
 
         }
         init();
+
+        function reorderWidget(start, end) {
+            console.log("contr")
+            console.log(start+ "  " + end);
+            WidgetService
+                .reorderWidget(vm.pageId, start, end)
+                .then(
+                    function (response) {
+                        init();
+                    },
+                    function (error) {
+                        console.log("/re")
+                        vm.error = "Widgets could not be reordered";
+                    });
+
+        }
+
+
 
 
 

@@ -12,7 +12,7 @@
 
         function createUser(username,password,verifyPassword) {
             UserService
-                .createUser(username,password,verifyPassword)
+                .register(username,password,verifyPassword)
                 .then(function (response) {
                     var user=response.data;
                     if(user){
@@ -21,6 +21,8 @@
                     else{
                         $location.url("/register");
                     }
+                },function (error) {
+                    vm.error="Username already taken";
                 })
 
         };
