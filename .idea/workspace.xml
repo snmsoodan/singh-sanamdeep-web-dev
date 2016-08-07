@@ -1,45 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="13f41a6d-c468-4a95-a0ce-f7210c72e085" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/uploads/13a31332e21a48a10b5d7b1ebd00b568" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/uploads/4678ef806e102301962969c7b7d3fcd8" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/uploads/5e7f496d12899481ccf96a96dce4ea0f" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/uploads/6a645078da5db8ae325504f61d89e14a" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/uploads/7b21369158c559c7fc305eedbbb148ce" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/uploads/7dd8c52843e359f8a4ff5bae8502ebc4" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/uploads/8e48df7de2f42239e29879c162e1a132" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/uploads/925970824b9839d900fbd82d77b9d953" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/uploads/afb5c0090718fdc49dbb27365319cee2" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/uploads/afcd346b207286e60c0aba20c9531e4d" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/uploads/cf14bbb444941aa87b2d0ba647810e3a" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assignment/directives/wam-directives.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/public/uploads/01d4c47de6e2a27d2e4f890a2e47fa78" afterPath="$PROJECT_DIR$/public/uploads/02c26c1ee9e9f7318b6714a39e8d9609" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assignment/models/widget/widget.model.server.js" afterPath="$PROJECT_DIR$/assignment/models/widget/widget.model.server.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assignment/models/widget/widget.schema.server.js" afterPath="$PROJECT_DIR$/assignment/models/widget/widget.schema.server.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assignment/services/user.service.server.js" afterPath="$PROJECT_DIR$/assignment/services/user.service.server.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assignment/services/widget.service.server.js" afterPath="$PROJECT_DIR$/assignment/services/widget.service.server.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/package.json" afterPath="$PROJECT_DIR$/package.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assignment/app.js" afterPath="$PROJECT_DIR$/public/assignment/app.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assignment/config.js" afterPath="$PROJECT_DIR$/public/assignment/config.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assignment/index.html" afterPath="$PROJECT_DIR$/public/assignment/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assignment/services/user.service.client.js" afterPath="$PROJECT_DIR$/public/assignment/services/user.service.client.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assignment/services/widget.service.client.js" afterPath="$PROJECT_DIR$/public/assignment/services/widget.service.client.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assignment/views/user/login.controller.client.js" afterPath="$PROJECT_DIR$/public/assignment/views/user/login.controller.client.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assignment/views/user/profile.controller.client.js" afterPath="$PROJECT_DIR$/public/assignment/views/user/profile.controller.client.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assignment/views/user/profile.view.client.html" afterPath="$PROJECT_DIR$/public/assignment/views/user/profile.view.client.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assignment/views/user/register.controller.client.js" afterPath="$PROJECT_DIR$/public/assignment/views/user/register.controller.client.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assignment/views/user/register.view.client.html" afterPath="$PROJECT_DIR$/public/assignment/views/user/register.view.client.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assignment/views/widget/widget-chooser.controller.client.js" afterPath="$PROJECT_DIR$/public/assignment/views/widget/widget-chooser.controller.client.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assignment/views/widget/widget-flickr-search.controller.client.js" afterPath="$PROJECT_DIR$/public/assignment/views/widget/widget-flickr-search.controller.client.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assignment/views/widget/widget-flickr-search.view.client.html" afterPath="$PROJECT_DIR$/public/assignment/views/widget/widget-flickr-search.view.client.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assignment/views/widget/widget-image.controller.client.js" afterPath="$PROJECT_DIR$/public/assignment/views/widget/widget-image.controller.client.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assignment/views/widget/widget-image.view.client.html" afterPath="$PROJECT_DIR$/public/assignment/views/widget/widget-image.view.client.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assignment/views/widget/widget-list.controller.client.js" afterPath="$PROJECT_DIR$/public/assignment/views/widget/widget-list.controller.client.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assignment/views/widget/widget-list.view.client.html" afterPath="$PROJECT_DIR$/public/assignment/views/widget/widget-list.view.client.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server.js" afterPath="$PROJECT_DIR$/server.js" />
-    </list>
+    <list default="true" id="13f41a6d-c468-4a95-a0ce-f7210c72e085" name="Default" comment="" />
     <ignored path="web-dev.iws" />
     <ignored path=".idea/workspace.xml" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -584,7 +546,7 @@
       <workItem from="1470090829485" duration="2924000" />
       <workItem from="1470270448897" duration="1241000" />
       <workItem from="1470451968878" duration="14232000" />
-      <workItem from="1470602258990" duration="187000" />
+      <workItem from="1470602258990" duration="648000" />
     </task>
     <task id="LOCAL-00001" summary="Added login,register and profile pages">
       <created>1467790163583</created>
@@ -730,7 +692,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="279457000" />
+    <option name="totallyTimeSpent" value="279918000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -742,26 +704,26 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="1" y="1" width="1918" height="1028" extended-state="0" />
-    <editor active="false" />
+    <frame x="1" y="1" width="1918" height="1028" extended-state="1" />
+    <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2008547" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295711" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2560175" sideWeight="0.5117521" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.14785554" sideWeight="0.494716" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.28290993" sideWeight="0.48824787" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32756633" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32756633" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2748268" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.28290993" sideWeight="0.48824787" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295711" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2748268" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295711" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -817,18 +779,6 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/assignment/services/user.service.server.js</url>
-          <line>78</line>
-          <option name="timeStamp" value="22" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/assignment/services/user.service.server.js</url>
-          <line>81</line>
-          <option name="timeStamp" value="23" />
-        </line-breakpoint>
-      </breakpoints>
       <option name="time" value="24" />
     </breakpoint-manager>
     <watches-manager />
