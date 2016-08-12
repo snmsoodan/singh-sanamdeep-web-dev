@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="13f41a6d-c468-4a95-a0ce-f7210c72e085" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assignment/services/user.service.server.js" afterPath="$PROJECT_DIR$/assignment/services/user.service.server.js" />
-    </list>
+    <list default="true" id="13f41a6d-c468-4a95-a0ce-f7210c72e085" name="Default" comment="" />
     <ignored path="web-dev.iws" />
     <ignored path=".idea/workspace.xml" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -24,17 +21,17 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="server.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="server.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/server.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-220">
-              <caret line="8" column="57" selection-start-line="8" selection-start-column="57" selection-end-line="8" selection-end-column="57" />
+            <state relative-caret-position="66">
+              <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="user.service.server.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="user.service.server.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/assignment/services/user.service.server.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="-1342">
@@ -150,8 +147,8 @@
         <option value="$PROJECT_DIR$/public/experiment/ngValidation/app.js" />
         <option value="$PROJECT_DIR$/public/experiment/ngValidation/style.css" />
         <option value="$PROJECT_DIR$/public/experiment/ngValidation/index.html" />
-        <option value="$PROJECT_DIR$/server.js" />
         <option value="$PROJECT_DIR$/assignment/services/user.service.server.js" />
+        <option value="$PROJECT_DIR$/server.js" />
       </list>
     </option>
   </component>
@@ -448,7 +445,7 @@
       <workItem from="1470872735459" duration="1551000" />
       <workItem from="1470878446957" duration="9757000" />
       <workItem from="1470969705004" duration="979000" />
-      <workItem from="1471020689195" duration="1440000" />
+      <workItem from="1471020689195" duration="1738000" />
     </task>
     <task id="LOCAL-00001" summary="Added login,register and profile pages">
       <created>1467790163583</created>
@@ -594,7 +591,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="323296000" />
+    <option name="totallyTimeSpent" value="323594000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -992,18 +989,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/server.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-220">
-          <caret line="8" column="57" selection-start-line="8" selection-start-column="57" selection-end-line="8" selection-end-column="57" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/assignment/services/user.service.server.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1342">
           <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="66">
+          <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
           <folding />
         </state>
       </provider>
