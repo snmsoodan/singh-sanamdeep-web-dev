@@ -24,7 +24,8 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
 app.use(cookieParser());
-app.use(session({ secret: "abcdef" }));
+app.use(session({ secret: process.env.SESSION_SECRET }));
+//app.use(session({ secret: "abcdef" }));
 
 app.use(passport.initialize());
 app.use(passport.session());
