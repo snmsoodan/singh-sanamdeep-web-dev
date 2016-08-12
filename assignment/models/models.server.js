@@ -10,5 +10,7 @@ module.exports=function () {
         widgetModel:require("./widget/widget.model.server")()
         //TODO:add all the other models:websteModel,pageModel...
     };
+    
+
     return models;
 };
