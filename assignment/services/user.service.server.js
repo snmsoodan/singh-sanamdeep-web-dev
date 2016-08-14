@@ -17,7 +17,7 @@ module.exports=function (app,models) {
 
 
     app.post("/api/user",createUser);
-    app.post("/api/login",passport.authenticate('local'),login);
+    app.post("/api/login", passport.authenticate('wam'), login);
     app.post("/api/logout",logout);
     app.post("/api/register",register);
     app.get("/api/loggedIn",loggedIn);
@@ -31,7 +31,7 @@ module.exports=function (app,models) {
     app.put("/api/user/:userId",updateUser);
     app.delete("/api/user/:userId",deleteUser);
 
-    passport.use(new LocalStrategy(localStrategy));
+    passport.use('wam',new LocalStrategy(localStrategy));
     passport.serializeUser(serializeUser);
     passport.deserializeUser(deserializeUser);
 
@@ -81,56 +81,66 @@ module.exports=function (app,models) {
 
     }
 
-    function register(req,res) {
-        var username=req.body.username;
-        var password=req.body.password;
-
+    function register(req, res) {
+        var username = req.body.username;
+        var password = req.body.password;
         userModel
             .findUserByUsername(username)
-            .then(function (user) {
-                if(user){
-                    res.status(400).send("username already used");
-                    return;
-                }
-                else{
-                    req.body.password = bcrypt.hashSync(req.body.password);
-                     userModel
-                        .createUser(req.body)
-                       .then(function (user) {
-                            if(user){
-                                req.login(user,function (err) {
-                                    if(err){
-                                        res.status(400).send(err);
-                                    }
-                                    else{
-                                        res.json(user);
-                                    }
-                                });
+            .then(
+                function (user) {
+                    if(user){
+                        res.status(400).send("username already in use");
+                        return;
+                    }else{
+
+                        req.body.password = bcrypt.hashSync(req.body.password);
+                        return  userModel
+                            .createUser(req.body)
+                    }
+                },
+                function (error) {
+                    res.status(400).send(error);
+                })
+            .then(
+                function (user) {
+                    if(user){
+                        req.login(user, function (err) {
+                            if(err){
+                                res.status(400).send(err);
                             }
-                       },function (err) {
-                           res.status(400).send(err);
-                       })
+                            else{
+                                res.json(user);
+                            }
+                        });
+                    }
+                },
+                function (error) {
+                    res.status(400).send(error);
                 }
-            },function (err) {
-                res.status(400).send(err);
-            })
+            )
+
+
     }
 
     function localStrategy(username, password, done) {
         userModel
             .findUserByUsername(username)
-            .then(function (user) {
-                if(user && bcrypt.compareSync(password, user.password)){
-                    done(null,user);
-                }else{
-                    done(null,false);
+            .then(
+                function(user) {
+                    if(user && bcrypt.compareSync(password, user.password)) {
+                        done(null, user);
+                    } else {
+                        done(null, false);
+                    }
+                },
+                function(err) {
+                    done(err);
                 }
-            },function (error) {
-                done(err);
-            })
+            );
     }
 
     function serializeUser(user, done) {
+        console.log("searealizable")
         done(null, user);
     }
 
@@ -139,9 +149,11 @@ module.exports=function (app,models) {
             .findUserById(user._id)
             .then(
                 function(user){
+                    console.log("desearealizable")
                     done(null, user);
                 },
                 function(err){
+                    console.log("just error local desearealizable")
                     done(err, null);
                 }
             );
@@ -153,7 +165,9 @@ module.exports=function (app,models) {
         res.send(200);
     }
     function login(req,res) {
+        console.log("login service")
         var user=req.user;
+        console.log(user)
         res.json(user);
     }
 

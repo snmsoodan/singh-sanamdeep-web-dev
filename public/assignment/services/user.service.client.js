@@ -47,6 +47,7 @@
                 password:password
             };
             return $http.post("/api/login",user);
+            console.log("login client")
         }
         
         function logout() {

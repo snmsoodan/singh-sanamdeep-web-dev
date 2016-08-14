@@ -8,13 +8,17 @@
          var vm=this;
          
          vm.login=function (username,password) {
+             console.log("username"+username)
+             console.log("password"+password)
              UserService
                  .login(username,password)
                  .then(function(response) {
-                    console.log(response)
+                    console.log("reached login controller")
                     var user=response.data;
+                     console.log(user._id)
                      $location.url("/user/"+user._id);
                  },function (error) {
+                     console.log("login controller error")
                      vm.error="User not found";
                  });
 

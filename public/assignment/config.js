@@ -36,6 +36,24 @@
                 }
             })
 
+            .when("/user/:id",{
+                templateUrl:"views/user/profile.view.client.html",
+                controller: "ProfileController",
+                controllerAs:"model",
+                resolve:{
+                    loggedIn:checkLoggedIn
+                }
+            })
+
+            // .when("/user/user:id",{
+            //     templateUrl:"views/user/profile.view.client.html",
+            //     controller: "ProfileController",
+            //     controllerAs:"model",
+            //     resolve:{
+            //         loggedIn:checkLoggedIn
+            //     }
+            // })
+
             .when("/user/:userId/website/:websiteId/page/:pageId/widget/new",{
                 templateUrl:"views/widget/widget-chooser.view.client.html",
                 controller:"WidgetChooserController",
