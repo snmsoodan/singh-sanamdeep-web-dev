@@ -78,8 +78,12 @@
                 templateUrl:"views/widget/widget-youtube.view.client.html",
                 controller:"WidgetYoutubeController",
                 controllerAs:"model"
+            })
 
-
+            .when("/user/:userId/website/:websiteId/page/:pageId/widget-html/:widgetId",{
+                templateUrl:"views/widget/widget-html.view.client.html",
+                 controller:"WidgetHtmlController",
+                controllerAs:"model"
             })
 
 
@@ -126,9 +130,7 @@
                 controllerAs:"model"
 
             })
-            .when("/html",{
-                templateUrl:"views/widget/widget-html.view.client.html"
-            })
+
 
 
 

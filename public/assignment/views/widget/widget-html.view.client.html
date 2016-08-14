@@ -21,15 +21,19 @@
 </nav>
 
 <div class="container">
+    <form>
 
-    <div ng-model="model.widget.text"
+    <div class="form-group" ng-model="model.widget.text"
          text-angular
          ta-toolbar="[['h1','h2','h3'],['bold','italics','underline','strikeThrough'],
         ['ul','ol'],['justifyLeft','justifyCenter','justifyRight','justifyFull'],
         ['indent','outdent'],['html']]">
-    </div>
-{{model.widget.text}}
-    <div ng-bind-html="model.widget.text"></div>
+        </div>
+    </form>
+<!--{{model.widget.text}}-->
+    <!--<div ng-bind-html="model.widget.text"></div>-->
+
+    <a class="btn btn-danger btn-block" ng-click="model.deleteWidget()">Delete</a>
 
 </div>
 <nav class="navbar navbar-default navbar-fixed-bottom">
@@ -45,7 +49,7 @@
 
             </div>
             <div class="col-xs-3 text-center">
-                <a href="#/profile" >
+                <a href="#/user/{{model.userId}}" >
                     <span class="glyphicon glyphicon-user"></span>
                 </a>
             </div>

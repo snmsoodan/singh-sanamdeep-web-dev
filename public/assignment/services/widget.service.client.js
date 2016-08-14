@@ -91,6 +91,20 @@
                 var url="/api/page/"+pageId+"/widget";
                 return $http.post(url,newWidget);
             }
+            else if(type==="widget-html"){
+
+                var newWidget={
+                    //   _id:widgetId,
+                    type:"HTML",
+                    _page:pageId,
+                    size:2,
+                    text:"Default Text"
+                };
+                // widgets.push(newWidget);
+                // return type;
+                var url="/api/page/"+pageId+"/widget";
+                return $http.post(url,newWidget);
+            }
             else {
                 return null;
             }

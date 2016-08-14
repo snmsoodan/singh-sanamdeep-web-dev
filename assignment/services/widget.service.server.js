@@ -163,6 +163,7 @@ module.exports=function (app,models) {
          var widget=req.body;
         var widgetId=req.params.widgetId;
         var widgetType=widget.type;
+        console.log(widgetType);
         // for(var i in widgets){
         //     if(widgets[i]._id===widgetId){
         //         if(widget.type==="HEADER") {

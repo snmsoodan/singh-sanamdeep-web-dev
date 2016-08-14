@@ -86,6 +86,14 @@ module.exports=function () {
                     }
                 })
         }
+        else if(widget.type==="HTML") {
+            return Widget
+                .update({_id:widget._id},{
+                    $set:{
+                        text:widget.text
+                    }
+                })
+        }
 
         else if(widget.type==="IMAGE") {
             console.log("4")
