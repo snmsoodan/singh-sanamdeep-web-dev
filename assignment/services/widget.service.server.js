@@ -122,13 +122,6 @@ module.exports=function (app,models) {
 
     function findWidgetById(req,res) {
         var widgetId=req.params.widgetId;
-        // for(var i in widgets){
-        //     if(widgets[i]._id===widgetId){
-        //         res.send(widgets[i]);
-        //         return;
-        //     }
-        // }
-        // res.send(400);
         widgetModel
             .findWidgetById(widgetId)
             .then(function (widget) {
